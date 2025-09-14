@@ -4,7 +4,7 @@
 .summary-bar-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;  /* Space between cards */
+  gap: 16px; /* Space between cards */
   justify-content: center;
   padding: 0 32px; /* Adds side margins */
   max-width: 1200px; /* Prevents excessive stretching */
@@ -21,14 +21,14 @@
   min-width: 120px;
   flex-grow: 1;
 }
-  
+
 .summary-bar-title {
   font-size: 0.75rem;
   color: #a0aec0;
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
-  
+
 .summary-bar-value {
   font-size: 1.25rem;
   font-weight: 600;
@@ -36,7 +36,7 @@
 }
 
 .dashboard-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #2c5282; /* Tailwind blue-800 */
   font-size: 2rem;
   font-weight: bold;
@@ -51,7 +51,7 @@
 .kpi-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 1px;
   justify-content: center;
   /* Removing extra padding so wrapper width is based solely on card content */
   margin: 0 auto;
@@ -59,22 +59,20 @@
 
 .kpi-card {
   background-color: white;
-  padding: 1.25rem;
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 0rem;
+  transition: all 0.3s ease-in-out;
   text-align: center;
-  width: 160px;   
-  min-width: 140px;
+  min-width: 20px;
   flex-shrink: 0;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-
 .kpi-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
+  transform: translateY(-4rem);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .kpi-title-container {
@@ -85,7 +83,7 @@
 }
 
 .kpi-section-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #2c5282;
   font-size: 1.5rem;
   font-weight: 600;
@@ -110,12 +108,16 @@
   font-size: 1rem;
   font-weight: 500;
   color: #718096;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .kpi-value {
   font-size: 1.75rem;
   font-weight: 700;
   color: #1a202c;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .kpi-change {
@@ -125,19 +127,19 @@
 }
 
 /* Gauge Styles */
-.gauge-container { 
-  width: 120px; 
-  height: 60px; 
-  border-radius: 120px 120px 0 0; 
-  background-color: #e2f0e4; 
-  position: relative; 
-  overflow: hidden; 
-  margin: 0.5rem auto 0; 
+.gauge-container {
+  width: 120px;
+  height: 60px;
+  border-radius: 120px 120px 0 0;
+  background-color: #e2f0e4;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem auto 0;
 }
 .summary-bar-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;  /* Space between cards */
+  gap: 16px; /* Space between cards */
   justify-content: center;
   padding: 0 32px; /* Adds side margins */
   max-width: 1200px; /* Prevents excessive stretching */
@@ -154,14 +156,14 @@
   min-width: 120px;
   flex-grow: 1;
 }
-  
+
 .summary-bar-title {
   font-size: 0.75rem;
   color: #a0aec0;
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
-  
+
 .summary-bar-value {
   font-size: 1.25rem;
   font-weight: 600;
@@ -169,7 +171,7 @@
 }
 
 .dashboard-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #2c5282; /* Tailwind blue-800 */
   font-size: 2rem;
   font-weight: bold;
@@ -181,7 +183,6 @@
 .kpi-section-inner {
   text-align: center;
 }
-
 
 .kpi-container {
   display: flex;
@@ -197,9 +198,9 @@
   padding: 1.25rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: center;
-  width: 160px;   
+  width: 160px;
   min-width: 140px;
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -207,8 +208,8 @@
 
 .kpi-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .kpi-divider {
@@ -228,7 +229,7 @@
 }
 
 .kpi-section-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #2c5282;
   font-size: 1.5rem;
   font-weight: 600;
@@ -261,42 +262,41 @@
   color: #1a202c;
 }
 
-
-.gauge-fill { 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  height: 100%; 
-  background-color: #3182ce; 
-  transition: width 0.6s ease-out; 
+.gauge-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #3182ce;
+  transition: width 0.6s ease-out;
 }
-.gauge-cover { 
-  width: 100px; 
-  height: 50px; 
-  border-radius: 100px 100px 0 0; 
-  background-color: white; 
-  position: absolute; 
-  top: 10px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  text-align: center; 
+.gauge-cover {
+  width: 100px;
+  height: 50px;
+  border-radius: 100px 100px 0 0;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.gauge-value { 
-  font-size: 1.125rem; 
-  font-weight: 700; 
-  color: #1a202c; 
+.gauge-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a202c;
 }
 .chart-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 0%;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   background-color: white;
   margin-top: 10px;
 }
@@ -321,11 +321,10 @@ canvas#keyMetricsTrendChart {
   margin-bottom: 15px;
 }
 
-
 .revenue-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .revenue-card-title {
@@ -383,7 +382,6 @@ canvas#keyMetricsTrendChart {
   gap: 16px;
 }
 
-
 .revenue-charts {
   display: flex;
   justify-content: space-between; /* Ensures equal spacing */
@@ -398,7 +396,6 @@ canvas#keyMetricsTrendChart {
   max-width: var(--section-width);
   gap: 16px;
 }
-
 
 .revenue-charts {
   display: flex;
@@ -416,7 +413,8 @@ canvas#keyMetricsTrendChart {
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,16 +424,15 @@ canvas#keyMetricsTrendChart {
   background-color: white;
   padding: 1.25rem;
   border-radius: 0.75rem;
-  flex:1;
+  flex: 1;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: center;
-  width: 1500px;   
+  width: 1500px;
   min-width: auto;
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 
 .kpi-wrapper,
 .revenue-wrapper {
@@ -454,14 +451,13 @@ canvas#keyMetricsTrendChart {
   text-align: center;
 }
 
-
 .ops-cost-card {
   flex: 1;
   background-color: white;
   padding: 1.25rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: center;
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -469,8 +465,8 @@ canvas#keyMetricsTrendChart {
 
 .ops-cost-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .ops-cost-cards {
@@ -528,15 +524,15 @@ canvas#keyMetricsTrendChart {
   padding: 1.25rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .guest-exp-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Charts */
@@ -584,12 +580,15 @@ canvas#keyMetricsTrendChart {
   width: 100%;
   max-width: var(--section-width);
   gap: 16px;
+  min-width: 50px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .distribution-card {
   flex: 1;
   background-color: white;
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -598,7 +597,7 @@ canvas#keyMetricsTrendChart {
 
 .distribution-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Charts */
@@ -687,7 +686,6 @@ canvas#keyMetricsTrendChart {
   justify-content: center;
 }
 
-
 /* Section Wrapper */
 .competitive-rate-wrapper {
   display: flex;
@@ -703,7 +701,7 @@ canvas#keyMetricsTrendChart {
 .competitive-rate-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Ensures 4 cards per row */
-  gap: 10px; 
+  gap: 10px;
   width: 100%;
   max-width: var(--section-width);
 }
@@ -733,8 +731,6 @@ canvas#keyMetricsTrendChart {
   color: #718096; /* Gray */
   font-weight: 600;
 }
-
-
 
 /* Charts */
 .competitive-rate-charts {
@@ -767,4 +763,18 @@ canvas#keyMetricsTrendChart {
 canvas {
   width: 100% !important;
   height: 250px !important;
+}
+
+.section-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  color: #2c5282;
 }
