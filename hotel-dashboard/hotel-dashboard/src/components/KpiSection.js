@@ -19,7 +19,9 @@ const KpiSection = () => {
 
   useEffect(() => {
     if (chartData) {
-      const ctx = document.getElementById("keyMetricsTrendChart")?.getContext("2d");
+      const ctx = document
+        .getElementById("keyMetricsTrendChart")
+        ?.getContext("2d");
       if (ctx) {
         if (window.keyMetricsChart) {
           window.keyMetricsChart.destroy();
@@ -37,7 +39,7 @@ const KpiSection = () => {
                 fill: false,
                 pointBackgroundColor: "#3182ce",
                 pointRadius: 4,
-                yAxisID: "yCurrency"
+                yAxisID: "yCurrency",
               },
               {
                 label: "ADR",
@@ -47,7 +49,7 @@ const KpiSection = () => {
                 fill: false,
                 pointBackgroundColor: "#4299E1",
                 pointRadius: 4,
-                yAxisID: "yCurrency"
+                yAxisID: "yCurrency",
               },
               {
                 label: "Occupancy",
@@ -57,20 +59,22 @@ const KpiSection = () => {
                 fill: false,
                 pointBackgroundColor: "#F6AD55",
                 pointRadius: 4,
-                yAxisID: "yPercentage"
-              }
-            ]
+                yAxisID: "yPercentage",
+              },
+            ],
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-              legend: { position: "bottom" } // Legend at the bottom
+              legend: { position: "bottom" }, // Legend at the bottom
             },
             scales: {
               x: {
-                ticks: { font: { size: 12, family: "Poppins", weight: "bold" } },
-                grid: { color: "#edf2f7", drawBorder: false }
+                ticks: {
+                  font: { size: 12, family: "Poppins", weight: "bold" },
+                },
+                grid: { color: "#edf2f7", drawBorder: false },
               },
               yCurrency: {
                 type: "linear",
@@ -78,8 +82,8 @@ const KpiSection = () => {
                 ticks: {
                   callback: (value) => `$${value}`,
                   font: { size: 12 },
-                  color: "#718096"
-                }
+                  color: "#718096",
+                },
               },
               yPercentage: {
                 type: "linear",
@@ -87,12 +91,12 @@ const KpiSection = () => {
                 ticks: {
                   callback: (value) => `${value}%`,
                   font: { size: 12 },
-                  color: "#718096"
+                  color: "#718096",
                 },
-                grid: { drawOnChartArea: false }
-              }
-            }
-          }
+                grid: { drawOnChartArea: false },
+              },
+            },
+          },
         });
       }
     }
@@ -100,79 +104,48 @@ const KpiSection = () => {
 
   return (
     <div>
-      <h2 className="kpi-section-title">Key Performance Snapshot</h2>
+      <h2 className="kpi-section-title" style={{ marginTop: 25 }}>
+        Key Performance Snapshot
+      </h2>
       <div className="kpi-section-inner">
         <div className="kpi-wrapper">
           <hr className="kpi-divider" />
           <div className="kpi-container">
             {kpis.length > 0 ? (
-              kpis.map((kpi, index) => (
-                <div key={index} className="kpi-card text-center">
-                  <div className="kpi-title-container">
-                    {/* Conditionally render icons */}
-                    {kpi.title === "RevPAR" && (
-                      <svg
-                        className="kpi-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        width="16"
-                        height="16"
-                        style={{ marginRight: "6px", verticalAlign: "middle" }}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
-                        />
-                      </svg>
-                    )}
-                    {kpi.title === "ADR" && (
-                      <svg
-                        className="kpi-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        style={{ marginRight: "6px", verticalAlign: "middle" }}
-                      >
-                        <path
-                          fill="#4299E1"
-                          d="M20 10.586l-8-8a2 2 0 00-2.828 0l-8 8A2 2 0 003.414 14l8 8a2 2 0 002.828 0l8-8a2 2 0 000-2.414z"
-                        />
-                        <circle cx="8" cy="8" r="1.5" fill="#fff" />
-                      </svg>
-                    )}
-                    <h3 className="kpi-title">{kpi.title}</h3>
-                  </div>
-                  {kpi.title === "RGI (RevPAR Index)" ? (
-                    <>
-                      <div className="gauge-container">
-                        <div
-                          className="gauge-fill"
-                          style={{
-                            width: `${(kpi.value / 180) * 120}px`
-                          }}
-                        ></div>
-                        <div className="gauge-cover">
-                          <span className="gauge-value">{kpi.value}</span>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-1">vs CompSet</p>
-                    </>
-                  ) : (
+              kpis
+                .filter(
+                  (kpi) =>
+                    kpi.title === "RevPAR" ||
+                    kpi.title === "ADR" ||
+                    kpi.title === "Occupancy Rate"
+                )
+                .map((kpi, index) => (
+                  <div key={index} className="kpi-card text-center">
+                    <div className="kpi-title-container">
+                      {/* RevPAR */}
+                      {kpi.title === "RevPAR"}
+
+                      {/* ADR */}
+                      {kpi.title === "ADR"}
+
+                      {/* Occupancy Rate */}
+                      {kpi.title === "Occupancy Rate"}
+                      <h3 className="kpi-title">{kpi.title}</h3>
+                    </div>
                     <div>
                       <p className="kpi-value">{kpi.value}</p>
-                      <p className={`kpi-change ${kpi.change.includes('-') ? 'kpi-change-negative' : 'kpi-change-positive'}`}>
-  {kpi.change}
-</p>
-
+                      <p
+                        className={`kpi-change ${
+                          kpi.change.includes("-")
+                            ? "kpi-change-negative"
+                            : "kpi-change-positive"
+                        }`}
+                      >
+                        {kpi.change}
+                      </p>
                     </div>
-                  )}
-                </div>
-              ))
+                  </div>
+                ))
             ) : (
               <p>Loading...</p>
             )}
