@@ -17,9 +17,9 @@ const Dashboard = () => {
       {/* <RevenueProfitability /> */}
       {/* <OperationalEfficiency /> */}
       <GuestExperience />
-      <DistributionMarketing />
       {/* <MarketBenchmarking /> */}
       <CompetitiveRateSnapshot />
+      <DistributionMarketing />
     </div>
   );
 };
