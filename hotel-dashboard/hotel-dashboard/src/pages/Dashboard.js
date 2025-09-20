@@ -7,6 +7,7 @@ import GuestExperience from "../components/GuestExperience";
 import DistributionMarketing from "../components/DistributionMarketing";
 // import MarketBenchmarking from "../components/MarketBenchmarking";
 import CompetitiveRateSnapshot from "../newComponents/CompetitiveRateSnapshot";
+import Footer from "../newComponents/Footer";
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,7 @@ const Dashboard = () => {
       {/* <MarketBenchmarking /> */}
       <CompetitiveRateSnapshot />
       <DistributionMarketing />
+      <Footer />
     </div>
   );
 };
