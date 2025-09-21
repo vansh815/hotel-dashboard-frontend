@@ -778,3 +778,80 @@ canvas {
   font-family: "Poppins", sans-serif;
   color: #2c5282;
 }
+/* Dynamic Pricing Table */
+.rate-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rate-comparison-table thead {
+  background: #f8f9fa;
+}
+
+.rate-comparison-table th {
+  padding: 20px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d0d0d;
+  text-align: left;
+}
+
+.rate-comparison-table td {
+  padding: 20px 25px;
+  color: #666;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.rate-comparison-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* Column specific styles */
+.rate-comparison-table th:nth-child(n + 3),
+.rate-comparison-table td:nth-child(n + 3) {
+  text-align: center;
+}
+
+.rate-comparison-table td:nth-child(4) {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Market demand badges */
+.market-demand-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.market-demand-high {
+  background: #10b981;
+}
+.market-demand-medium {
+  background: #f59e0b;
+}
+.market-demand-low {
+  background: #ef4444;
+}
+
+/* Download button */
+.download-btn {
+  padding: 10px 16px;
+  background: #14b8a6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.download-btn:hover {
+  background: #0d9488;
+}

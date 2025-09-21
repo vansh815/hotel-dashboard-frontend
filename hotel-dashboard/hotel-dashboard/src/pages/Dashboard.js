@@ -6,6 +6,7 @@ import KpiSection from "../components/KpiSection";
 import GuestExperience from "../components/GuestExperience";
 import DistributionMarketing from "../components/DistributionMarketing";
 // import MarketBenchmarking from "../components/MarketBenchmarking";
+import DynamicPricing from "../newComponents/DynamicPricing";
 import CompetitiveRateSnapshot from "../newComponents/CompetitiveRateSnapshot";
 import Footer from "../newComponents/Footer";
 
@@ -21,6 +22,7 @@ const Dashboard = () => {
       {/* <MarketBenchmarking /> */}
       <CompetitiveRateSnapshot />
       <DistributionMarketing />
+      <DynamicPricing />
       <Footer />
     </div>
   );

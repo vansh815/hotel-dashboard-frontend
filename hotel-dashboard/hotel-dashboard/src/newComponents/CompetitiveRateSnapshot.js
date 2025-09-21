@@ -84,7 +84,7 @@ export default function CompetitiveRateSnap() {
   return (
     <div className="competitive-rate-wrapper">
       {/* Section Title */}
-      <h2 class="kpi-section-title">Competitive Rate Snapshot</h2>
+      <h2 className="kpi-section-title">Competitive Rate Snapshot</h2>
       <hr className="kpi-divider" />
 
       {/* 4 KPI Cards */}
